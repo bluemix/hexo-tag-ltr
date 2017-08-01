@@ -1,5 +1,6 @@
 {
   "name": "hexo-tag-ltr",
-  "version": "0.0.2",
+  "author": "bluemix.me",
+  "version": "0.0.3",
   "main": "index"
 }

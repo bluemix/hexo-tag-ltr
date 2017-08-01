@@ -5,14 +5,16 @@
 * Licensed under the MIT license.
 *
 * Syntax:
-* {% ltr %}
-*  <LTR text> 
+* {% ltr [html tag]%}
+*  <ltr text> 
 * {% endltr %} 
 */
 
 hexo.extend.tag.register('ltr', function(args, content){
-	var tag = "<p dir='ltr'>"
+	var className = "div"
+	if (args[0]) { className = args[0] }
+	var tag = "<" + className + " dir='ltr'>"
 	tag += content
-	tag += "</p>"
+	tag += "</" + className + ">"
 	return tag;
 }, {ends: true});
