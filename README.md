@@ -13,13 +13,25 @@ npm install --save hexo-tag-ltr
 ## Usage
 
 ```bash
-{% ltr %}
+{% ltr [css class]%}
   LTR text
 {% endltr %} 
 ```
+
+`css class` defaults to `div`
+
 ## Example
 
 this is a Arabic document, but wants to have and LTR direction
+```
+{% ltr div %}
+{% blockquote  Richard Feynman %}
+ What I cannot create, I do not understand.
+{% endblockquote %}
+{% endltr %}
+```
+
+and 
 
 ```
 مقتطفات من بعض الحكم
